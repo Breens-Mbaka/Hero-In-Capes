@@ -8,4 +8,11 @@ class HeroTest {
         Hero testHero = new Hero("name",25);
         assertEquals(true , testHero instanceof Hero);
     }
+
+    @Test
+    void testingHeroObjectReturnsNameCorrectly_String() {
+        Hero testHero = new Hero("Spider Man", 23);
+        Hero testHero2 = new Hero("Spider Man", 23);
+        assertEquals(testHero.name, testHero2.getName());
+    }
 }
