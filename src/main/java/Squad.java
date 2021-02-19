@@ -6,4 +6,8 @@ public class Squad {
         this.squadName = squadName;
         this.cause = cause;
     }
+
+    public String getSquadName() {
+        return squadName;
+    }
 }
