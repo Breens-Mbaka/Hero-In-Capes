@@ -16,5 +16,4 @@ class SquadTest {
         assertEquals(testSquad.squadName, testSquad2.squadName);
     }
 
-
 }
