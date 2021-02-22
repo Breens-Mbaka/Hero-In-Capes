@@ -4,8 +4,7 @@ import spark.template.handlebars.HandlebarsTemplateEngine;
 import java.util.HashMap;
 import java.util.Map;
 
-import static spark.Spark.get;
-import static spark.Spark.staticFileLocation;
+import static spark.Spark.*;
 
 public class App {
     public static void main(String[] args) {
@@ -16,17 +15,18 @@ public class App {
            return new ModelAndView(model, "index.hbs");
        }, new HandlebarsTemplateEngine());
 
-       get("/heroes", (request,response)-> {
+       post("/heroes", (request,response)-> {
            Map<String, Object> model = new HashMap<>();
            String name = request.queryParams("name");
-           String age = request.queryParams("age");
+           int age = Integer.parseInt(request.queryParams("age"));
            String weakness = request.queryParams("weakness");
            String strength = request.queryParams("strength");
+           Hero newHero = new Hero(name,age,weakness,strength);
 
-           model.put("name",name);
-           model.put("age",age);
-           model.put("weakness",weakness);
-           model.put("strength",strength);
+           model.put("name",newHero.name);
+           model.put("age",newHero.age);
+           model.put("weakness",newHero.weakness);
+           model.put("strength",newHero.strength);
            return new ModelAndView(model,"squad.hbs");
        },new HandlebarsTemplateEngine());
     }
