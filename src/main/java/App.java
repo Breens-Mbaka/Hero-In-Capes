@@ -1,6 +1,7 @@
 import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -16,17 +17,16 @@ public class App {
        }, new HandlebarsTemplateEngine());
 
        post("/heroes", (request,response)-> {
-           Map<String, Object> model = new HashMap<>();
+           Map<String, ArrayList<Hero>> model = new HashMap<>();
            String name = request.queryParams("name");
            int age = Integer.parseInt(request.queryParams("age"));
            String weakness = request.queryParams("weakness");
            String strength = request.queryParams("strength");
            Hero newHero = new Hero(name,age,weakness,strength);
 
-           model.put("name",newHero.getName());
-           model.put("age",newHero.getAge());
-           model.put("weakness",newHero.getWeakness());
-           model.put("strength",newHero.getStrength());
+           //get all created heroes and display them and their stats
+           ArrayList allHeroes = Hero.getAll();
+           model.put("myHeroes", allHeroes);
            return new ModelAndView(model,"squad.hbs");
        },new HandlebarsTemplateEngine());
     }

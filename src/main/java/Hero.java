@@ -1,5 +1,6 @@
 import java.awt.*;
 import java.util.ArrayList;
+import static javax.swing.JOptionPane.showMessageDialog;
 
 public class Hero {
     private String name;
@@ -26,6 +27,9 @@ public class Hero {
     }
 
     public static ArrayList<Hero> getAll(){
+        if(mInstances.size() > 5) {
+            showMessageDialog(null, "You can only have 5 super heroes");
+        }
         return mInstances;
     }
 
