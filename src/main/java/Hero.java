@@ -1,10 +1,12 @@
+import java.awt.*;
 import java.util.ArrayList;
 
 public class Hero {
-    public String name;
-    public int age;
-    public String weakness;
-    public String strength;
+    private String name;
+    private int age;
+    private String weakness;
+    private String strength;
+    private static ArrayList<Hero> mInstances = new ArrayList<>();
 
 
     public Hero(String name, int age, String weakness, String strength) {
@@ -12,6 +14,7 @@ public class Hero {
         this.age = age;
         this.weakness = weakness;
         this.strength = strength;
+        this.mInstances.add(this);
     }
 
     public String getName() {
@@ -20,6 +23,10 @@ public class Hero {
 
     public int getAge() {
         return age;
+    }
+
+    public static ArrayList<Hero> getAll(){
+        return mInstances;
     }
 
     public String getWeakness() {

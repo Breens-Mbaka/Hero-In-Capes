@@ -23,10 +23,10 @@ public class App {
            String strength = request.queryParams("strength");
            Hero newHero = new Hero(name,age,weakness,strength);
 
-           model.put("name",newHero.name);
-           model.put("age",newHero.age);
-           model.put("weakness",newHero.weakness);
-           model.put("strength",newHero.strength);
+           model.put("name",newHero.getName());
+           model.put("age",newHero.getAge());
+           model.put("weakness",newHero.getWeakness());
+           model.put("strength",newHero.getStrength());
            return new ModelAndView(model,"squad.hbs");
        },new HandlebarsTemplateEngine());
     }
