@@ -7,28 +7,29 @@
 </nav>
 {{#partial "content"}}
     <div class="form-section">
-        <form class="form">
+        <form class="form" action="/squad">
             <h2 class="form_title">Let's save the world</h2>
             <p class="info">Enter details for your superhero</p>
 
             <div class="form_div">
-                <input type="text" class="form_input" placeholder=" ">
-                <label for="" class="form_label">Name</label>
+                <input type="text" class="form_input" placeholder=" " name="name">
+                <label for="name" class="form_label">Name</label>
             </div>
             <div class="form_div">
-                <input type="text" class="form_input" placeholder=" ">
-                <label for="" class="form_label">Age</label>
+                <input type="text" class="form_input" placeholder=" " name="age">
+                <label for="age" class="form_label">Age</label>
             </div>
             <div class="form_div">
-                <input type="text" class="form_input" placeholder=" ">
-                <label for="" class="form_label">Strength</label>
+                <input type="text" class="form_input" placeholder=" " name="strength" id="strength">
+                <label for="strength" class="form_label">Strength</label>
             </div>
             <div class="form_div">
-                <input type="text" class="form_input" placeholder=" ">
-                <label for="" class="form_label">Weakness</label>
+                <input type="text" class="form_input" placeholder=" " name="weakness" id="weakness">
+                <label for="weakness" class="form_label">Weakness</label>
             </div>
-            <input type="submit" class="sign_in" value="Sign In">
+            <button type="submit" class="sign_in" value="Sign In">Submit</button>
         </form>
     </div>
+
 {{/partial}}
 {{> layout.hbs}}

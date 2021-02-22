@@ -15,11 +15,4 @@ class HeroTest {
         Hero testHero2 = new Hero("Spider Man", 23);
         assertEquals(testHero.name, testHero2.name);
     }
-
-    @Test
-    void testingHeroObjectGetsSquadName() {
-        Squad testSquad = new Squad("Avengers","Fight for justice");
-        Hero testHero = new Hero(testSquad);
-        assertEquals(testSquad, testHero.getSquad());
-    }
 }
