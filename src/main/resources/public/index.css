@@ -59,7 +59,7 @@
     transition: 0.3s;
 }
 
-.sign_in {
+.submit {
     padding: .75rem 2rem;
     margin-top: 15px;
     outline: none;
@@ -73,7 +73,7 @@
     margin-left: 80px;
 }
 
-.sign_in:hover {
+.submit:hover {
     color: blue;
     background-color: white;
     box-shadow: 0 10px 36px rgb(77, 61, 146);
@@ -137,4 +137,13 @@ h1 {
         margin: auto;
         display: block;
         margin-top: 450px;
+}
+
+.back a {
+    text-decoration: none;
+    color: white;
+}
+
+.back a:hover {
+    color: white;
 }
