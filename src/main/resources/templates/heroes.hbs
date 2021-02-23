@@ -11,12 +11,16 @@
     {{#each myHeroes}}
         <div class="card">
             <div class="card-body">
-                <div class="card-text"><strong>Superheroes' name: </strong>{{name}}</div>
-                <div class="card-text"><strong>Superheroes' age : </strong>{{age}}</div>
-                <div class="card-text"><strong>Superheroes' strength : </strong>{{strength}}</div>
-                <div class="card-text"><strong>Superheroes' weakness : </strong>{{weakness}}</div>
+                <div class="card-title">Hero</div>
+                <div class="card-text"><strong>Name: </strong>{{name}}</div>
+                <div class="card-text"><strong>Age : </strong>{{age}}</div>
+                <div class="card-text"><strong>Strength : </strong>{{strength}}</div>
+                <div class="card-text"><strong>Weakness : </strong>{{weakness}}</div>
             </div>
         </div>
     {{/each}}
+{{/partial}}
+{{#partial "footer"}}
+    <button type="submit" class="back">Submit</button>
 {{/partial}}
 {{> layout.hbs}}

@@ -106,12 +106,35 @@
     margin-right: 20px;
     margin_left: 20px;
     margin-top: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
 .card-body {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 h1 {
     text-align: center;
+    margin-top: 40px;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.back {
+        padding: .75rem 2rem;
+        outline: none;
+        border: none;
+        background-color: green;
+        color: white;
+        font-size: normal;
+        border-radius: 1.5rem;
+        cursor: pointer;
+        transition: 0.3s;
+        margin: auto;
+        display: block;
+        margin-top: 450px;
 }
