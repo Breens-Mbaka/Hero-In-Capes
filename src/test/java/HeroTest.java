@@ -13,6 +13,6 @@ class HeroTest {
     void testingHeroObjectReturnsNameCorrectly_String() {
         Hero testHero = new Hero("Spider Man", 23,"laughing","concentration");
         Hero testHero2 = new Hero("Spider Man", 23, "laughing","concentration");
-        assertEquals(testHero.name, testHero2.name);
+        assertEquals(testHero.getName(), testHero2.getName());
     }
 }

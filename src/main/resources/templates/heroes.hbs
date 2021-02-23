@@ -1,0 +1,22 @@
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Heroes</a>
+        <a class="nav-link" href="#">Home</a>
+        <a class="nav-link" href="#">Squad</a>
+    </div>
+</nav>
+
+{{#partial "content"}}
+    <h1>Your heroes</h1>
+    {{#each myHeroes}}
+        <div class="card">
+            <div class="card-body">
+                <div class="card-text"><strong>Superheroes' name: </strong>{{name}}</div>
+                <div class="card-text"><strong>Superheroes' age : </strong>{{age}}</div>
+                <div class="card-text"><strong>Superheroes' strength : </strong>{{strength}}</div>
+                <div class="card-text"><strong>Superheroes' weakness : </strong>{{weakness}}</div>
+            </div>
+        </div>
+    {{/each}}
+{{/partial}}
+{{> layout.hbs}}

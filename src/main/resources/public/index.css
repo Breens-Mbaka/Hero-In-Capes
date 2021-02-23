@@ -98,3 +98,20 @@
 .form_input:focus{
     border: 1.5px solid rgb(77, 61, 146);
 }
+
+.card {
+    width: 25%;
+    float: left;
+    padding: 0 10px;
+    margin-right: 20px;
+    margin_left: 20px;
+    margin-top: 20px;
+}
+
+.card-body {
+    font-size: 14px;
+}
+
+h1 {
+    text-align: center;
+}

@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 import static javax.swing.JOptionPane.showMessageDialog;
@@ -10,12 +11,22 @@ public class Hero {
     private static ArrayList<Hero> mInstances = new ArrayList<>();
 
 
-    public Hero(String name, int age, String weakness, String strength) {
+
+    Hero(String name, int age, String weakness, String strength) {
         this.name = name;
         this.age = age;
         this.weakness = weakness;
         this.strength = strength;
         this.mInstances.add(this);
+    }
+
+    public static ArrayList<Hero> getAllHeroes() {
+        if(mInstances.size() > 5) {
+            JOptionPane.showMessageDialog(null, "You can only have five superheroes");
+            Hero lastItem = mInstances.get(mInstances.size() - 1);
+            mInstances.remove(lastItem);
+        }
+        return mInstances;
     }
 
     public String getName() {
@@ -26,12 +37,7 @@ public class Hero {
         return age;
     }
 
-    public static ArrayList<Hero> getAll(){
-        if(mInstances.size() > 5) {
-            showMessageDialog(null, "You can only have 5 super heroes");
-        }
-        return mInstances;
-    }
+
 
     public String getWeakness() {
         return weakness;

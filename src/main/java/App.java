@@ -25,9 +25,9 @@ public class App {
            Hero newHero = new Hero(name,age,weakness,strength);
 
            //get all created heroes and display them and their stats
-           ArrayList allHeroes = Hero.getAll();
+           ArrayList allHeroes = Hero.getAllHeroes();
            model.put("myHeroes", allHeroes);
-           return new ModelAndView(model,"squad.hbs");
+           return new ModelAndView(model,"heroes.hbs");
        },new HandlebarsTemplateEngine());
     }
 }
