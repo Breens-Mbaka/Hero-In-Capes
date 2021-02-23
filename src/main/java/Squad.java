@@ -1,17 +1,11 @@
 public class Squad {
-    public String squadName;
-    public String cause;
+private Hero mHero;
 
-    public Squad(String squadName, String cause) {
-        this.squadName = squadName;
-        this.cause = cause;
-    }
+public Squad(Hero hero) {
+    mHero = hero;
+}
 
-    public String getSquadName() {
-        return squadName;
-    }
-
-    public String getCause() {
-        return cause;
+    public Hero getHero() {
+        return mHero;
     }
 }
