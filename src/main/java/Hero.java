@@ -9,15 +9,20 @@ public class Hero {
     private String weakness;
     private String strength;
     private static ArrayList<Hero> mInstances = new ArrayList<>();
+    private String squadName;
 
 
+    public String getSquadName() {
+        return squadName;
+    }
 
-    Hero(String name, int age, String weakness, String strength) {
+    Hero(String name, int age, String weakness, String strength, String squadName) {
         this.name = name;
         this.age = age;
         this.weakness = weakness;
         this.strength = strength;
         this.mInstances.add(this);
+        this.squadName = squadName;
     }
 
     public static ArrayList<Hero> getAllHeroes() {

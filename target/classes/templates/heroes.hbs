@@ -8,7 +8,7 @@
 
 {{#partial "content"}}
     <h1>Your heroes</h1>
-    {{#each all}}
+    {{#each myHeroes}}
         <div class="card">
             <div class="card-body">
                 <div class="card-title">Hero</div>
@@ -16,9 +16,11 @@
                 <div class="card-text"><strong>Age : </strong>{{age}}</div>
                 <div class="card-text"><strong>Strength : </strong>{{strength}}</div>
                 <div class="card-text"><strong>Weakness : </strong>{{weakness}}</div>
-                <div class="card-text"><strong>Squad : </strong>{{squadName}}</div>
             </div>
         </div>
     {{/each}}
+{{/partial}}
+{{#partial "footer"}}
+    <button type="submit" class="back"><a href="/">Add More</a></button>
 {{/partial}}
 {{> layout.hbs}}
