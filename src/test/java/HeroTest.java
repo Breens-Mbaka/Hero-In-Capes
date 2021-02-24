@@ -4,9 +4,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class HeroTest {
     @Test
-    void testingHeroObjectIsInstanceOfHeroClass_true() throws Exception {
+    void testingHeroObjectIsInstanceOfHeroClass_true()  {
         Hero testHero = new Hero("name",25,"laughing","concentration","avengers");
-        assertEquals(true , testHero instanceof Hero);
+        assertTrue(testHero instanceof Hero);
     }
 
     @Test

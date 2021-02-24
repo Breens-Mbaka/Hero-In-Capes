@@ -8,6 +8,9 @@
 
 {{#partial "content"}}
     <h1>Your heroes</h1>
+    {{#if squadName}}
+        <h1>{{squadName}}</h1>
+    {{/if}}
     {{#each myHeroes}}
         <div class="card">
             <div class="card-body">

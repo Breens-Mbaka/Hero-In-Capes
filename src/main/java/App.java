@@ -36,8 +36,8 @@ public class App {
            request.session().attribute("weakness",weakness);
            String strength = request.queryParams("strength");
            request.session().attribute("strength",strength);
-           String squadName = request.queryParams("squad-name");
-           request.session().attribute("squad-name", squadName);
+           String squadName = request.queryParams("squadName");
+           request.session().attribute("squadName", squadName);
            Hero newHero = new Hero(name,age,weakness,strength,squadName);
            //get all created heroes and display them and their stats
            ArrayList allHeroes = Hero.getAllHeroes();
