@@ -1,0 +1,1 @@
+web: java -jar target/heroes-in-capes-1.0-jar-with-dependencies.jar

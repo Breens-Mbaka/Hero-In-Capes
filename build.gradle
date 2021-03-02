@@ -24,3 +24,5 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+defaultTasks = ['clean']
+task stage(dependsOn: ['clean', 'installDist'])

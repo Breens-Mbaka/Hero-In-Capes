@@ -8,7 +8,6 @@ import java.util.Map;
 import static spark.Spark.*;
 
 public class App {
-
     static int getHerokuAssignedPort() {
         ProcessBuilder processBuilder = new ProcessBuilder();
         if (processBuilder.environment().get("PORT") != null) {
@@ -46,6 +45,8 @@ public class App {
        },new HandlebarsTemplateEngine());
         get("/squad", (request,response)->{
             Map<String, Object> model = new HashMap<>();
+            ArrayList allHeroes = Hero.getAllHeroes();
+            model.put("myHeroes", allHeroes);
             return new ModelAndView(model, "squad.hbs");
         }, new HandlebarsTemplateEngine());
     }

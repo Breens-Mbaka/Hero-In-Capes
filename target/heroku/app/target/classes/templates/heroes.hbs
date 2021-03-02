@@ -1,5 +1,16 @@
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Heroes</a>
+        <a class="nav-link" href="#">Home</a>
+        <a class="nav-link" href="#">Squad</a>
+    </div>
+</nav>
+
 {{#partial "content"}}
     <h1>Your heroes</h1>
+    {{#if squadName}}
+        <h1>{{squadName}}</h1>
+    {{/if}}
     {{#each myHeroes}}
         <div class="card">
             <div class="card-body">
@@ -8,7 +19,6 @@
                 <div class="card-text"><strong>Age : </strong>{{age}}</div>
                 <div class="card-text"><strong>Strength : </strong>{{strength}}</div>
                 <div class="card-text"><strong>Weakness : </strong>{{weakness}}</div>
-                <div class="card-footer"><strong>Squad name</strong> : {{squadName}}</div>
             </div>
         </div>
     {{/each}}

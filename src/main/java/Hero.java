@@ -1,7 +1,5 @@
 import javax.swing.*;
-import java.awt.*;
 import java.util.ArrayList;
-import static javax.swing.JOptionPane.showMessageDialog;
 
 public class Hero {
     private String name;
@@ -11,10 +9,6 @@ public class Hero {
     private static ArrayList<Hero> mInstances = new ArrayList<>();
     private String squadName;
 
-
-    public String getSquadName() {
-        return squadName;
-    }
 
     Hero(String name, int age, String weakness, String strength, String squadName) {
         this.name = name;
@@ -38,11 +32,13 @@ public class Hero {
         return name;
     }
 
+    public String getSquadName() {
+        return squadName;
+    }
+
     public int getAge() {
         return age;
     }
-
-
 
     public String getWeakness() {
         return weakness;
@@ -51,4 +47,5 @@ public class Hero {
     public String getStrength() {
         return strength;
     }
+
 }
